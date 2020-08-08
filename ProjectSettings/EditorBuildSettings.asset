@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ChemistryCardScene.unity
+    guid: 4014b90446ac03f46aabb535be156453
   m_configObjects: {}
