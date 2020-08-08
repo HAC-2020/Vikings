@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rheostat : MonoBehaviour
 {
+    public PhysicsSceneManager physicsSceneManager;
     float minResistance = 100f;
     float maxResistance = 10000f;
     private bool isActive=false;
@@ -74,6 +75,10 @@ public class Rheostat : MonoBehaviour
         Vector3 p = wiper.transform.localPosition;
         p.x = 3-lengthToMove;
         wiper.transform.localPosition= p;
+    }
+
+    private void OnMouseDown() {
+        
     }
  
 }
