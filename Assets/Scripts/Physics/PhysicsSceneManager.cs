@@ -18,6 +18,7 @@ public class PhysicsSceneManager : MonoBehaviour
     public int state;
     public GameObject rheostat, ammeter, power, c1, c2, c3;
     public bool isRheostat, isAmmeter, isPower;
+    public Text powerText, ammeterText;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +44,7 @@ public class PhysicsSceneManager : MonoBehaviour
         }
         else if (g.name == "voltage_source")
         {
-            if (state == 4 || state == 6)
+            if (state == 4 || state == 6 || state==7)
             {
                 isPower = true;
             }
@@ -122,6 +123,12 @@ public class PhysicsSceneManager : MonoBehaviour
         else if (state == 7)
         {
             c3.SetActive(true);
+
+        }
+        else if (state == 8)
+        {
+            powerText.text = "ON";
+            ammeterText.text = "2.8A";
         }
     }
     public void WrongStep()
