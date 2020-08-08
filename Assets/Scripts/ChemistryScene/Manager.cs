@@ -99,5 +99,20 @@ public class Manager : MonoBehaviour
             
         }
 
+        if(carbons.Length> 0 && Hydrogens.Length > 3)
+        {
+            LeanTween.move(carbons[0], Vector3.zero, 1f);
+            LeanTween.move(Hydrogens[0], new Vector3(0f, -0.284f, 0), 1f);
+            LeanTween.move(Hydrogens[1], new Vector3(-0.194f,-0.305f,-0.123f), 1f);
+            LeanTween.move(Hydrogens[2], new Vector3(0.188f, -0.242f, -0.2f), 1f);
+            LeanTween.move(Hydrogens[3], new Vector3(0, -0.259f, 0.209f), 1f);
+
+            newSelection();
+
+            LeanTween.scaleY(ch4Card, 3.628176f, 0.5f);
+        }
+
     }
+
+    public GameObject ch4Card;
 }
