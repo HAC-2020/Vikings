@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using IBM.Watson.Examples;
 
 public class PhysicsSceneManager : MonoBehaviour
 {
@@ -18,11 +19,13 @@ public class PhysicsSceneManager : MonoBehaviour
     public int state;
     public GameObject rheostat, ammeter, power, c1, c2, c3;
     public bool isRheostat, isAmmeter, isPower;
-    public Text powerText, ammeterText;
+    public Text powerText, ammeterText, instructions;
+    public ExampleTextToSpeechV1 speechV1;
     // Start is called before the first frame update
     void Start()
     {
-        state = 1;
+        state = 0;
+        GoToNextState();
     }
 
     // Update is called once per frame
@@ -40,6 +43,10 @@ public class PhysicsSceneManager : MonoBehaviour
             {
                 isRheostat = true;
             }
+            else
+            {
+                WrongStep();
+            }
 
         }
         else if (g.name == "voltage_source")
@@ -48,12 +55,19 @@ public class PhysicsSceneManager : MonoBehaviour
             {
                 isPower = true;
             }
+            else{
+                WrongStep();
+            }
         }
         else if (g.name == "ammeter")
         {
             if (state == 6 || state == 5)
             {
                 isAmmeter = true;
+            }
+            else
+            {
+                WrongStep();
             }
         }
         if ((state == 4 && isPower && isRheostat) ||
@@ -112,27 +126,51 @@ public class PhysicsSceneManager : MonoBehaviour
     public void GoToNextState()
     {
         state++;
+        if(state==1)
+        {
+            instructions.text = "Place Voltage Source";
+        }
+        if (state == 2)
+        {
+            instructions.text = "Place Rheostat";
+        }
+        if (state == 3)
+        {
+            instructions.text = "Place Ammeter";
+        }
+        if(state == 4)
+        {
+            instructions.text = "Connect Voltage Source to Rheostat";
+        }
         if (state == 5)
         {
             c1.SetActive(true);
+            instructions.text = "Connect Ammeter to Rheostat";
+
         }
         else if (state == 6)
         {
             c2.SetActive(true);
+            instructions.text = "Connect Volatage Source to Ammeter";
+
         }
         else if (state == 7)
         {
+            instructions.text = "Switch On Voltage Source";
             c3.SetActive(true);
 
         }
         else if (state == 8)
         {
+            instructions.text = "Record Ammeter Readings";
             powerText.text = "ON";
             ammeterText.text = "2.8A";
         }
+        speechV1.Speak(instructions.text);
     }
     public void WrongStep()
     {
-        Debug.Log("WRONGGGGGG");
+        speechV1.Speak("Incorrect");
+    
     }
 }

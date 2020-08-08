@@ -466,7 +466,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 35.444, y: -83.325005, z: -37.908}
 --- !u!1 &154903811
 GameObject:
@@ -782,6 +782,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicsSceneManager: {fileID: 926535066}
+--- !u!1 &364553048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364553051}
+  - component: {fileID: 364553050}
+  - component: {fileID: 364553049}
+  m_Layer: 0
+  m_Name: Speech
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &364553049
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364553048}
+  m_CullTransparentMesh: 0
+--- !u!114 &364553050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364553048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ff781e4ff1146729663a093b169fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iamApikey: Y33QuBZKZ_A1Ibu-PBSNWrVdHlqaH6uBzGJUnqmOgG6c
+  serviceUrl: https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/d6f13792-4c19-4df1-9d74-f76743895df4
+--- !u!224 &364553051
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364553048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 901, y: 468}
+  m_SizeDelta: {x: 1802, y: 936}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &542242931
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +939,7 @@ Transform:
   - {fileID: 218003277}
   - {fileID: 644048937}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644048936
 GameObject:
@@ -1368,6 +1427,8 @@ MonoBehaviour:
   isPower: 0
   powerText: {fileID: 835175963}
   ammeterText: {fileID: 1545910778}
+  instructions: {fileID: 724387560}
+  speechV1: {fileID: 364553050}
 --- !u!4 &926535067
 Transform:
   m_ObjectHideFlags: 0
@@ -1380,7 +1441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034816500
 GameObject:
@@ -1554,7 +1615,7 @@ RectTransform:
   - {fileID: 1922490220}
   - {fileID: 724387559}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1964,7 +2025,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1817452288
 GameObject:

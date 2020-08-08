@@ -45,7 +45,6 @@ namespace IBM.Watson.Examples
         private string placeholderText = "Please type text here and press enter.";
         private string waitingText = "Watson Text to Speech service is synthesizing the audio!";
         private string synthesizeMimeType = "audio/wav";
-        public InputField textInput;
         private bool _textEntered = false;
         private AudioClip _recording = null;
         private byte[] audioStream = null;
@@ -57,14 +56,12 @@ namespace IBM.Watson.Examples
             Runnable.Run(CreateService());
         }
 
-        void Update()
+        public void Speak(string text)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                Runnable.Run(ExampleSynthesize(textInput.text));
-            }
+            Runnable.Run(ExampleSynthesize(text));
         }
 
+       
         private IEnumerator CreateService()
         {
             if (string.IsNullOrEmpty(iamApikey))
