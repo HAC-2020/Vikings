@@ -11,7 +11,7 @@ SmartAR looks at a new way of doing labs. The app has inbuilt AR experiments to 
 - ### Test Mode:
     In this mode a student can type in the test code and give a lab test which will be immidiately graded and the marks will be stored on the blockchain.
 - ### Flash Cards:
-    Topic based models and question directly echoAR se fetch ho rha hai and we can keep adding more without any change to the code.These are to help students memorize hard concepts and make it possible for them to use one of the most common techniques to memorize premade flashcard.
+    These are to help students memorize hard concepts and make it possible for them to use one of the most common techniques to memorize premade flashcard. Topic based models and question are directly fetched from Echo AR so we can keep adding more without any change to the code.
 
 ## Technology Used
 - <b>Photoshop
@@ -44,17 +44,23 @@ Before building the project, please ensure that the project has the following pl
 
 - EchoAR Dasboard<br>
   <img src="ReadmeAssets/echo1.png" width="600"  />
-  <img src="ReadmeAssets/echo1.png" width="600" /> 
+  <img src="ReadmeAssets/echo2.png" width="600" /> 
+- Solidity Dashboard<br>
+    <img src="ReadmeAssets/sol.jpeg" width="600" /> 
+- Metamask Dashboard<br>
+    <img src="ReadmeAssets/metamask.jpeg" width="600" /> 
 - Unity Collaborate Commit History(As of 3PM 9th August)
 
   <img src="ReadmeAssets/u1.png" width="100" />
   <img src="ReadmeAssets/u2.png" width="100"/>
-- App Screenshots
-<img src="ReadmeAssets/PhoneScreenshots/5.jpeg" width="100"/>
-<img src="ReadmeAssets/PhoneScreenshots/2.jpeg" width="100"/>
-<img src="ReadmeAssets/PhoneScreenshots/4.jpeg" width="100"/>
-<img src="ReadmeAssets/PhoneScreenshots/3.jpeg" width="100"/>
-<img src="ReadmeAssets/PhoneScreenshots/1.jpeg" width="100"/>
+- App Screenshots<br>
+    <img src="ReadmeAssets/PhoneScreenshots/5.jpeg" width="100"/>
+    <img src="ReadmeAssets/PhoneScreenshots/2.jpeg" width="100"/>
+    <img src="ReadmeAssets/PhoneScreenshots/4.jpeg" width="100"/>
+    <img src="ReadmeAssets/PhoneScreenshots/3.jpeg" width="100"/>
+    <img src="ReadmeAssets/PhoneScreenshots/1.jpeg" width="100"/>
+    <img src="ReadmeAssets/PhoneScreenshots/7.png" width="100"/>
+    <img src="ReadmeAssets/PhoneScreenshots/8.png" width="100"/>
 
 
 
