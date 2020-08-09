@@ -44,16 +44,12 @@ Before building the project, please ensure that the project has the following pl
 
 - EchoAR Dasboard<br>
   <img src="ReadmeAssets/echo1.png" width="600"  />
-<br>
   <img src="ReadmeAssets/echo1.png" width="600" /> 
-  <br>
-- Unity Collaborate Commit History(As of 3PM 9th August)<br>
+- Unity Collaborate Commit History(As of 3PM 9th August)
 
   <img src="ReadmeAssets/u1.png" width="100" />
   <img src="ReadmeAssets/u2.png" width="100"/>
-<br>
 - App Screenshots
-<br>
 <img src="ReadmeAssets/PhoneScreenshots/5.jpeg" width="100"/>
 <img src="ReadmeAssets/PhoneScreenshots/2.jpeg" width="100"/>
 <img src="ReadmeAssets/PhoneScreenshots/4.jpeg" width="100"/>
