@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChemistryCardScene.unity
     guid: 4014b90446ac03f46aabb535be156453
+  - enabled: 1
+    path: Assets/Scenes/PhysicsScene.unity
+    guid: fbb4cf0765f6447749fb2ad9fc599653
+  - enabled: 1
+    path: Assets/Quiz/QuizScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

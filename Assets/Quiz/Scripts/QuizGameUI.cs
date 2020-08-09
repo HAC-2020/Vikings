@@ -40,6 +40,9 @@ public class QuizGameUI : MonoBehaviour
             Button localBtn = uiButtons[i];
             localBtn.onClick.AddListener(() => OnClick(localBtn));
         }
+        quizManager.StartGame(0);
+        mainMenu.SetActive(false);
+        gamePanel.SetActive(true);
 
     }
     /// <summary>
@@ -69,7 +72,7 @@ public class QuizGameUI : MonoBehaviour
                 questionVideo.transform.gameObject.SetActive(false);        //deactivate questionVideo
                 questionImg.transform.gameObject.SetActive(false);          //deactivate questionImg
                 questionAudio.transform.gameObject.SetActive(true);         //activate questionAudio
-                
+
                 audioLength = question.audioClip.length;                    //set audio clip
                 StartCoroutine(PlayAudio());                                //start Coroutine
                 break;
@@ -98,11 +101,11 @@ public class QuizGameUI : MonoBehaviour
             options[i].image.color = normalCol; //set color of button to normal
         }
 
-        answered = false;                       
+        answered = false;
 
     }
 
-  
+
 
     /// <summary>
     /// IEnumerator to repeate the audio after some time

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using IBM.Watson.Examples;
+using UnityEngine.SceneManagement;
+
 
 public class PhysicsSceneManager : MonoBehaviour
 {
@@ -51,11 +53,12 @@ public class PhysicsSceneManager : MonoBehaviour
         }
         else if (g.name == "voltage_source")
         {
-            if (state == 4 || state == 6 || state==7)
+            if (state == 4 || state == 6 || state == 7)
             {
                 isPower = true;
             }
-            else{
+            else
+            {
                 WrongStep();
             }
         }
@@ -126,7 +129,7 @@ public class PhysicsSceneManager : MonoBehaviour
     public void GoToNextState()
     {
         state++;
-        if(state==1)
+        if (state == 1)
         {
             instructions.text = "Place Voltage Source";
         }
@@ -138,7 +141,7 @@ public class PhysicsSceneManager : MonoBehaviour
         {
             instructions.text = "Place Ammeter";
         }
-        if(state == 4)
+        if (state == 4)
         {
             instructions.text = "Connect Voltage Source to Rheostat";
         }
@@ -166,11 +169,22 @@ public class PhysicsSceneManager : MonoBehaviour
             powerText.text = "ON";
             ammeterText.text = "2.8A";
         }
+        else if (state == 9)
+        {
+            StartCoroutine(WaitForSceneLoad());
+
+        }
         speechV1.Speak(instructions.text);
     }
     public void WrongStep()
     {
         speechV1.Speak("Incorrect");
-    
+
+    }
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("QuizScene");
+
     }
 }
