@@ -23,11 +23,15 @@ public class PhysicsSceneManager : MonoBehaviour
     public bool isRheostat, isAmmeter, isPower;
     public Text powerText, ammeterText, instructions;
     public ExampleTextToSpeechV1 speechV1;
+    public int wrongSteps = 0;
+    public BlockchainHandler blockchain;
     // Start is called before the first frame update
     void Start()
     {
         state = 0;
         GoToNextState();
+        blockchain.StartDepositTokens();
+
     }
 
     // Update is called once per frame
@@ -165,9 +169,10 @@ public class PhysicsSceneManager : MonoBehaviour
         }
         else if (state == 8)
         {
-            instructions.text = "Record Ammeter Readings";
+            instructions.text = "Score Saved. Record Ammeter Readings";
             powerText.text = "ON";
             ammeterText.text = "2.8A";
+            blockchain.StartDepositTokens();
         }
         else if (state == 9)
         {
@@ -179,6 +184,7 @@ public class PhysicsSceneManager : MonoBehaviour
     public void WrongStep()
     {
         speechV1.Speak("Incorrect");
+        wrongSteps++;
 
     }
     private IEnumerator WaitForSceneLoad()
