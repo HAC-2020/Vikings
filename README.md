@@ -45,7 +45,7 @@ Before building the project, please ensure that the project has the following pl
 - EchoAR Dasboard<br>
   <img src="ReadmeAssets/echo1.png" width="600"  />
   <img src="ReadmeAssets/echo2.png" width="600" /> 
-- Solidity Dashboard<br>
+- Remix Dashboard<br>
     <img src="ReadmeAssets/sol.jpeg" width="600" /> 
 - Metamask Dashboard<br>
     <img src="ReadmeAssets/metamask.jpeg" width="600" /> 
