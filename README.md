@@ -1,6 +1,6 @@
 # Team Vikings
 
-LearnAR is an AR app developed in unity by the team <b>Vikings</b>, for the HackAgainstCovid Hackathon.
+SmartAR is an AR app developed in unity by the team <b>Vikings</b>, for the HackAgainstCovid Hackathon.
 
 # Features
 While theoretical knowledge can be disseminated through online videos and e-schooling, students, particularly those pursuing STEM, miss out on the practical side of their education. A number of STEM courses in High school and university rely on access to laboratories to conduct practical sessions and experiments. Unfortunately, due to the spread of COVID-19 most students are unable to access laboratories and hence miss out on the practical component of their education.
