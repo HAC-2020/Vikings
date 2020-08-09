@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/AuthScene.unity
+    guid: e96cb49808ca70241a774f68517de228
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: bd58159c7c679194fad5f34b03cbc427
+  - enabled: 1
+    path: Assets/Scenes/SimulationOptionsScene.unity
+    guid: ac3c413292e7398419527849d8b16244
+  - enabled: 1
     path: Assets/Scenes/ChemistryCardScene.unity
     guid: 4014b90446ac03f46aabb535be156453
   m_configObjects: {}

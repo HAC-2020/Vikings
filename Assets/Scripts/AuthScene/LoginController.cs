@@ -33,7 +33,7 @@ public class LoginController : MonoBehaviour
                 
                 
         }));
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MenuScene");
     }
     void GetErrorMessage(AuthError errorCode)
     {
